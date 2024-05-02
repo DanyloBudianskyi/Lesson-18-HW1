@@ -11,8 +11,12 @@ int main()
         { "Brown", {8, 11, 1968}, "Tester", 2700, "Secondary" },
         { "Davis", {30, 3, 1977}, "Director", 4800, "Higher" }
     };
+    int count = 0;
     for (int i = 0; i < N; i++) {
-        cout << "Employee #" << i + 1 << endl;
-        arr[i].showEmployee();
+        if (2024 - arr[i].birthday.year > 60) {
+            ++count;
+            cout << "Employee #" << i + 1 << endl;
+            arr[i].showEmployee();
+        }
     }
 }
